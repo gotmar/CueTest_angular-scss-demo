@@ -1,103 +1,113 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
 
-<h1>Good morning, {{ username }}</h1>
+<div class="main-wrapper">
+  
+  <div class="container-header">
 
-<button class="reservation-button">
-  <svg version="2.0">
-    <use href="#fi-rr-add"></use>
-  </svg>
-  Create reservation
-</button>
+    <h1>Good morning, {{ username }}</h1>
 
-<p>
-  You have <b>3 reservations</b>
-  <svg class="reservation-info" version="2.0">
-    <use href="#fi-rr-info"></use>
-  </svg>
-  planned for today.
-</p>
+    <button class="reservation-button">
+      <svg version="2.0">
+        <use href="#fi-rr-add"></use>
+      </svg>
+      Create reservation
+    </button>
 
-<div class="container-reservation-cards">
-  <div class="reservation-card">
-    <div class="reservation-card-info">
-      <img
-        alt="Placeholder Image"
-        class="reservation-card-img"
-        src="assets/images/placeholer.png"
-      />
-      <div>
-        <h3 class="reservation-card-name">DEV Call</h3>
-        <p class="reservation-card-time">12:00 - 13:00</p>
-        <p class="reservation-card-date">07/09/23</p>
+  </div>
+
+  <div class="contaainer-msg">
+    <p>
+      You have <b>3 reservations</b>
+      <svg class="reservation-info" version="2.0">
+        <use href="#fi-rr-info"></use>
+      </svg>
+      planned for today.
+    </p>
+  </div>
+
+  <div class="container-reservation-cards">
+    <div class="reservation-card">
+      <div class="reservation-card-info">
+        <img
+          alt="Placeholder Image"
+          class="reservation-card-img"
+          src="assets/images/placeholer.png"
+        />
+        <div>
+          <h3 class="reservation-card-name">DEV Call</h3>
+          <p class="reservation-card-time">12:00 - 13:00</p>
+          <p class="reservation-card-date">07/09/23</p>
+        </div>
+      </div>
+      <div class="reservation-card-action">
+        <button class="button-reservation-detail">
+          <svg version="2.0">
+            <use href="#fi-rr-search"></use>
+          </svg>
+          Reservation detail
+        </button>
       </div>
     </div>
-    <div class="reservation-card-action">
-      <button class="button-reservation-detail">
-        <svg version="2.0">
-          <use href="#fi-rr-search"></use>
+  </div>
+
+  <div class="container-divider">
+    <hr class="divider" />
+  </div>
+
+  <div class="container-menu">
+    <ul class="menu">
+      <li class="menu-item active">Menu item</li>
+      <li class="menu-item">Another item</li>
+      <li class="menu-item">Last item</li>
+    </ul>
+  </div>
+
+  <div class="container-checkbox">
+    <div class="checkbox-wrapper">
+      <input id="myCheckbox1" name="mycheckbox" type="checkbox" />
+      <label class="checkbox-label" for="myCheckbox1">
+        <svg class="checkbox-image" version="2.0">
+          <use href="#fi-rr-check"></use>
         </svg>
-        Reservation detail
-      </button>
+        I'am available
+      </label>
+      <span class="checkbox-description">Checkbox description</span>
+    </div>
+
+    <div class="checkbox-wrapper">
+      <input checked="" id="myCheckbox2" name="mycheckbox" type="checkbox" />
+      <label class="checkbox-label" for="myCheckbox2">
+        <svg class="checkbox-image" version="2.0">
+          <use href="#fi-rr-check"></use>
+        </svg>
+        I'am available
+      </label>
+      <span class="checkbox-description">Checkbox description</span>
+    </div>
+
+    <div class="checkbox-wrapper">
+      <input id="myCheckbox3" name="mycheckbox" type="checkbox" />
+      <label class="checkbox-label" for="myCheckbox3">
+        <svg class="checkbox-image" version="2.0">
+          <use href="#fi-rr-check"></use>
+        </svg>
+        I'am available
+      </label>
+      <span class="checkbox-description">Checkbox description</span>
+    </div>
+
+    <div class="checkbox-wrapper">
+      <input id="myCheckbox4" name="mycheckbox" type="checkbox" />
+      <label class="checkbox-label" for="myCheckbox4">
+        <svg class="checkbox-image" version="2.0">
+          <use href="#fi-rr-check"></use>
+        </svg>
+        I'am available
+      </label>
+      <span class="checkbox-description">Checkbox description</span>
     </div>
   </div>
-</div>
 
-<div class="container-divider">
-  <hr class="divider" />
-</div>
-
-<div class="container-menu">
-  <ul class="menu">
-    <li class="menu-item active">Menu item</li>
-    <li class="menu-item">Another item</li>
-    <li class="menu-item">Last item</li>
-  </ul>
-</div>
-
-<div class="container-checkbox">
-  <div>
-    <input id="myCheckbox1" name="mycheckbox" type="checkbox" />
-    <label class="checkbox-label" for="myCheckbox1">
-      <svg class="checkbox-image" version="2.0">
-        <use href="#fi-rr-check"></use>
-      </svg>
-      I'am available
-    </label>
-    <span class="checkbox-description">Checkbox description</span>
-  </div>
-
-  <div>
-    <input checked="" id="myCheckbox2" name="mycheckbox" type="checkbox" />
-    <label class="checkbox-label" for="myCheckbox2">
-      <svg class="checkbox-image" version="2.0">
-        <use href="#fi-rr-check"></use>
-      </svg>
-      I'am available
-    </label>
-    <span class="checkbox-description">Checkbox description</span>
-  </div>
-
-  <div>
-    <input id="myCheckbox3" name="mycheckbox" type="checkbox" />
-    <label class="checkbox-label" for="myCheckbox3">
-      <svg class="checkbox-image" version="2.0">
-        <use href="#fi-rr-check"></use>
-      </svg>
-      I'am available
-    </label>
-    <span class="checkbox-description">Checkbox description</span>
-  </div>
-
-  <div>
-    <input id="myCheckbox4" name="mycheckbox" type="checkbox" />
-    <label class="checkbox-label" for="myCheckbox4">
-      <svg class="checkbox-image" version="2.0">
-        <use href="#fi-rr-check"></use>
-      </svg>
-      I'am available
-    </label>
-    <span class="checkbox-description">Checkbox description</span>
-  </div>
 </div>
 
 
