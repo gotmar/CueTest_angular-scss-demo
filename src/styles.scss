@@ -83,6 +83,12 @@ button {
 }
 
 .container-reservation-cards {
+  display: flex;
+  flex-direction: row;
+  gap: $spacing-grid-md;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  row-gap: $spacing-grid-md; 
 }
 
 .reservation-card {
