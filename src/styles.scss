@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-  padding: $spacing-safe-area-desktop; /*$spacing-safe-area-desktop:2.25rem;)*/
+  padding: $spacing-safe-area-desktop;
 }
 
 h1 {
@@ -96,6 +96,7 @@ button {
   flex-direction: column;
   min-width: 17.5rem;
   max-width: 31.375rem;
+  flex:1;
   padding: $spacing-safe-area-mobile;
   padding-bottom:0.375em;
   gap: $spacing-grid-sm;
@@ -213,8 +214,8 @@ li.menu-item {
   margin-top: -0.1875em;
   margin-right: 0.375em;
   padding: 0.1875em;
-  height: 1em;
-  width: 1em;
+  height: 1.2em;
+  width: 1.1em;
   border-radius: $radius-checkbox;
   background-image: $checkbox-gradient;
   border-color: transparent;
