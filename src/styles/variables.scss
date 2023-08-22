@@ -1,9 +1,17 @@
-$root-barva: gray;
-$druha-barva: black;
-
-$div-pozadi: white;
-$div-sirka: 900px;
-$div-padding: 5px;
-$div-border-barva: #ccc;
-
 // css VARIABLES -colours -radius -spacing
+
+$font-family-secondary: Nunito;
+
+$radius-lg: 1em;
+$radius-checkbox: 25%;
+
+$checkbox-gradient: linear-gradient(to left, #3772ff, #2c5bcc);
+$primary-gradient: linear-gradient(to right, #2c5bcc 0%, #3772ff 100%);
+$secondary-gradient: linear-gradient(to right, #3772ff 0%, #2c5bcc 100%);
+
+$colors-text-paragraph: #33272b;
+$colors-button-primary-text: #fff;
+$colors-input-text-placeholder: #a49fa1;
+$colors-tabs-unactive-text: #493f42;
+$colors-tabs-active-text: #3772ff;
+$colors-button-primary-link-text: #3772ff;

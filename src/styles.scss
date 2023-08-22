@@ -1,5 +1,207 @@
 /* Add application styles & imports to this file! */
 @import './styles/variables';
+
+html {
+  font-size: 1em;
+  font-family: Basic Sans, sans-serif;
+}
+
+h1 {
+  font-size: 2.25em;
+}
+
 p {
-   background-color: $root-barva;
+  color: $colors-text-paragraph;
+  font-family: $font-family-secondary;
+  font-size: 1em;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+   padding: 1em;
+   border-radius: $radius-lg;
+   text-align: center;
+   border: none;
+   cursor: pointer;
+   font-family: $font-family-secondary;
+   font-size: 1em;
+   letter-spacing: 0.12rem;
+   text-transform: uppercase;
+   & svg {
+      margin-bottom: -0.125em;
+      padding-right: 0.25em;
+      height: 1em;
+      width: 1em;
+    }
+}
+
+.reservation-button {
+  color: $colors-button-primary-text;
+  background-image: $primary-gradient;
+  &:hover {
+    background-image: $secondary-gradient;
+  }
+}
+
+.reservation-info {
+  margin-bottom: -0.1875em;
+  padding: 0 0.125em 0 0.375em;
+  cursor: pointer;
+  height: 1em;
+  width: 1em;
+}
+
+.container-reservation-cards {
+}
+
+.reservation-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 17.5rem;
+  max-width: 31.375rem;
+  padding: var(--spacing-safe-area-mobile, 1rem);
+  gap: var(--spacing-grid-sm, 0.75rem);
+  border-radius: $radius-lg;
+  background: var(--colors-background-body, #fff);
+  box-shadow: 0 0.25em 1.25em 0 rgba(0, 0, 0, 0.15);
+}
+
+.reservation-card-img {
+  height: 5.5rem;
+  width: 7.1875rem;
+  background: lightgrey; /*placeholder BG*/
+}
+
+.reservation-card-info {
+  display: flex;
+  flex-direction: row;
+  gap: 0.9375em;
+  & h3 {
+    font-size: 1.3125rem;
+    margin: 0 0 0.75rem 0;
+  }
+  & p {
+    margin: 0 0 0.75rem 0;
+    &.reservation-card-date {
+      margin: 0;
+    }
+  }
+}
+
+.reservation-card-action {
+  display: flex;
+  justify-content: center;
+}
+
+.button-reservation-detail {
+  color: $colors-button-primary-link-text;
+  background: none;
+  font-weight: 700;
+  &:hover {
+    color: #fff;
+    border: 0.0625em #fff;
+    background-image: $primary-gradient;
+    font-weight: 500;
+  }
+}
+
+.container-divider {
+  margin: 0 1em;
+}
+
+.divider {
+  display: block;
+  height: 0.0625rem;
+  border: 0;
+  border-top: 0.0625rem solid #d2cfd0;
+  margin: 1em auto;
+  padding: 0;
+}
+
+ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0 0.75em;
+}
+
+li.menu-item {
+  font-family: $font-family-secondary;
+  font-size: 1em;
+  font-weight: 400;
+  color: $colors-tabs-unactive-text;
+  cursor: pointer;
+  padding: 0.5em;
+  &.active,
+  &:hover {
+    color: $colors-tabs-active-text;
+    font-weight: 700;
+    background-color: #d7e3ff;
+    border-radius: $radius-lg;
+    padding: 0.5em;
+  }
+}
+
+.container-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin-top: 0.125em; /*correction*/
+}
+
+.checkbox-description {
+  color: $colors-input-text-placeholder;
+  font-family: $font-family-secondary;
+  font-size: 0.75em;
+  padding-top: 0.75em;
+  display: block;
+}
+
+.checkbox-image {
+  border: 0.0625em solid;
+  color: #000;
+  margin-top: -0.1875em;
+  margin-right: 0.375em;
+  padding: 0.1875em;
+  height: 1em;
+  width: 1em;
+  border-radius: $radius-checkbox;
+  background-image: $checkbox-gradient;
+  border-color: transparent;
+  path {
+    fill: currentColor;
+  }
+}
+
+input[type='checkbox'] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  &:focus + label .checkbox {
+    outline: 0.0625em dotted;
+  }
+  &:not(:checked) + label .checkbox-image {
+    background: none;
+    border: 0.0625em solid #d2cfd0;
+  }
+  &:not(:checked) + label path {
+    display: none;
+  }
+}
+
+.checkbox-label {
+  cursor: pointer;
+  display: flex;
+  font-size: 0.875em;
+  font-weight: 700;
+  font-family: $font-family-secondary;
+  color: $colors-text-paragraph;
+  .checkbox {
+    margin-right: 0.35rem;
+  }
 }
