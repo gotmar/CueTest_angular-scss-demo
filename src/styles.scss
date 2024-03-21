@@ -61,54 +61,6 @@ button {
   }
 }
 
-.reservation-card-action {
-  display: flex;
-  justify-content: center;
-}
-
-.reservation-detail-buttonlink {
-  padding: 0.5em;
-  border-radius: $radius-lg;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  font-family: $font-family-secondary;
-  font-size: 1em;
-  letter-spacing: 0.12rem;
-  text-transform: uppercase;
-  color: $colors-button-primary-link-text;
-  background: none;
-  font-weight: 700;
-  text-decoration: none;
-  & svg {
-    margin-bottom: -0.125em;
-    padding-right: 0.25em;
-    height: 1em;
-    width: 1em;
-  }
-  &.active,
-  &:hover {
-    color: #fff;
-    border: 0.0625em #fff;
-    background-image: $primary-gradient;
-    font-weight: 500;
-  } 
-}
-
-
-
-.button-reservation-detail {
-  color: $colors-button-primary-link-text;
-  background: none;
-  font-weight: 700;
-  &:hover {
-    color: #fff;
-    border: 0.0625em #fff;
-    background-image: $primary-gradient;
-    font-weight: 500;
-  }
-}
-
 .reservation-button {
   /*
   position: absolute;
@@ -175,6 +127,40 @@ button {
       margin: 0;
     }
   }
+}
+
+.reservation-card-action {
+  display: flex;
+  justify-content: center;
+}
+
+.reservation-detail-buttonlink {
+  padding: 0.5em;
+  border-radius: $radius-md;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-family: $font-family-secondary;
+  font-size: 1em;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $colors-button-primary-link-text;
+  background: none;
+  font-weight: 700;
+  & svg {
+    margin-bottom: -0.125em;
+    padding-right: 0.25em;
+    height: 1em;
+    width: 1em;
+  }
+  &.active,
+  &:hover {
+    color: #fff;
+    border: 0.0625em #fff;
+    background-image: $primary-gradient;
+    font-weight: 500;
+  } 
 }
 
 .container-divider {
