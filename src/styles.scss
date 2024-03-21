@@ -88,7 +88,7 @@ button {
   gap: $spacing-grid-md;
   align-items: flex-start;
   flex-wrap: wrap;
-  row-gap: $spacing-grid-md; 
+  row-gap: $spacing-grid-md;
 }
 
 .reservation-card {
@@ -96,9 +96,9 @@ button {
   flex-direction: column;
   min-width: 17.5rem;
   max-width: 31.375rem;
-  flex:1;
+  flex: 1;
   padding: $spacing-safe-area-mobile;
-  padding-bottom:0.375em;
+  padding-bottom: 0.375em;
   gap: $spacing-grid-sm;
   border-radius: $radius-lg;
   background: #fff;
@@ -108,7 +108,8 @@ button {
 .reservation-card-img {
   height: 5.5rem;
   width: 7.1875rem;
-  border-radius:1em;
+  border-radius: 1em;
+  /*background-image : url("^assets/images/test.gif");*/
   background: lightgrey; /*placeholder BG*/
 }
 

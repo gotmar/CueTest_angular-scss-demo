@@ -8,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservationCardComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
   }
 
   @Input() reservationCardName: string;
   @Input() reservationCardTime: string;
+
   
 }
