@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,4 +13,7 @@ export class ReservationCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Input() reservationCardName: string;
+  @Input() reservationCardTime: string;
+  
 }
