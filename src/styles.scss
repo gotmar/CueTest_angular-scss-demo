@@ -2,7 +2,7 @@
 @import './styles/variables';
 
 html {
-  font-size: 1em;
+  font-size: $font-size-base;
   font-family: Basic Sans, sans-serif;
 }
 
@@ -12,14 +12,14 @@ body {
 }
 
 h1 {
-  font-size: 2.25em;
+  font-size: $font-size-xlg;
   margin: 0;
 }
 
 p {
   color: $colors-text-paragraph;
   font-family: $font-family-secondary;
-  font-size: 1em;
+  font-size: $font-size-base;
   margin: 0;
 }
 
@@ -44,14 +44,14 @@ p {
 }
 
 button {
-  padding: 1em;
+  padding: $button-padding;
   border-radius: $radius-lg;
   text-align: center;
   border: none;
   cursor: pointer;
   font-family: $font-family-secondary;
-  font-size: 1em;
-  letter-spacing: 0.12rem;
+  font-size: $font-size-base;
+  letter-spacing: $letter-spacing;
   text-transform: uppercase;
   & svg {
     margin-bottom: -0.125em;
@@ -66,14 +66,18 @@ button {
   position: absolute;
   right: $spacing-safe-area-desktop;
   top: $spacing-safe-area-desktop;
-*/
+ */
   color: $colors-button-primary-text;
   background-image: $primary-gradient;
+  transition-duration: $transition-speed-off;
   &:hover {
     background-image: $secondary-gradient;
+    transform: $transform-effect;
+    transition-duration: $transition-speed-on;
   }
 }
 
+/*SVG image adjustments*/
 .reservation-info {
   margin-bottom: -0.1875em;
   padding: 0 0.125em 0 0.375em;
@@ -101,16 +105,14 @@ button {
   padding-bottom: 0.375em;
   gap: $spacing-grid-sm;
   border-radius: $radius-lg;
-  background: #fff;
   box-shadow: 0 0.25em 1.25em 0 rgba(0, 0, 0, 0.15);
 }
 
 .reservation-card-img {
   height: 5.5rem;
   width: 7.1875rem;
-  border-radius: 1em;
+  border-radius: $radius-lg;
   /*background-image : url("^assets/images/test.gif");*/
-  background: lightgrey; /*placeholder BG*/
 }
 
 .reservation-card-info {
@@ -118,7 +120,7 @@ button {
   flex-direction: row;
   gap: 0.9375em;
   & h3 {
-    font-size: 1.3125rem;
+    font-size: $font-size-lg;
     margin: 0 0 0.75rem 0;
   }
   & p {
@@ -135,19 +137,20 @@ button {
 }
 
 .reservation-detail-buttonlink {
-  padding: 0.5em;
+  padding: $buttonlink-padding;
   border-radius: $radius-md;
   text-align: center;
   border: none;
   cursor: pointer;
   font-family: $font-family-secondary;
-  font-size: 1em;
-  letter-spacing: 0.12rem;
+  font-size: $font-size-base;
+  letter-spacing: $letter-spacing;
   text-transform: uppercase;
   text-decoration: none;
   color: $colors-button-primary-link-text;
   background: none;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
+  transition-duration: $transition-speed-off;
   & svg {
     margin-bottom: -0.125em;
     padding-right: 0.25em;
@@ -159,8 +162,10 @@ button {
     color: #fff;
     border: 0.0625em #fff;
     background-image: $primary-gradient;
-    font-weight: 500;
-  } 
+    font-weight: $font-weight-mid;
+    transform: $transform-effect;
+    transition-duration: $transition-speed-on;
+  }
 }
 
 .container-divider {
@@ -190,18 +195,20 @@ ul.menu {
 
 li.menu-item {
   font-family: $font-family-secondary;
-  font-size: 1em;
-  font-weight: 400;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
   color: $colors-tabs-unactive-text;
   cursor: pointer;
-  padding: 0.5em;
+  padding: $menu-item-padding;
+  transition-duration: $transition-speed-off;
   &.active,
   &:hover {
     color: $colors-tabs-active-text;
-    font-weight: 700;
-    background-color: #d7e3ff;
+    font-weight: $font-weight-bold;
+    background-color: $menu-item-background;
     border-radius: $radius-lg;
-    padding: 0.5em;
+    padding: $menu-item-padding;
+    transition-duration: $transition-speed-on;
   }
 }
 
@@ -222,7 +229,7 @@ li.menu-item {
 .checkbox-description {
   color: $colors-input-text-placeholder;
   font-family: $font-family-secondary;
-  font-size: 0.75em;
+  font-size: $font-size-xsm;
   padding-top: 0.75em;
   display: block;
 }
@@ -238,8 +245,14 @@ li.menu-item {
   border-radius: $radius-checkbox;
   background-image: $checkbox-gradient;
   border-color: transparent;
+  transition-duration: $transition-speed-off;
   path {
     fill: currentColor;
+  }
+  &.active,
+  &:hover {
+    background-image: $primary-gradient;
+    transition-duration: $transition-speed-on;
   }
 }
 
@@ -263,8 +276,8 @@ input[type='checkbox'] {
 .checkbox-label {
   cursor: pointer;
   display: flex;
-  font-size: 0.875em;
-  font-weight: 700;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
   font-family: $font-family-secondary;
   color: $colors-text-paragraph;
   .checkbox {
