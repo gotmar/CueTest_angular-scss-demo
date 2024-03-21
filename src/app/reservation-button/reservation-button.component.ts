@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,5 +12,7 @@ export class ReservationButtonComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  @Input() reservationButtonName: string;
 
 }
